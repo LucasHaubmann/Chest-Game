@@ -9,6 +9,12 @@ import java.util.Scanner;
 
 public class UI {
 
+    public static void clearScreen(){
+        for (int i = 0; i < 15; i++) {
+            System.out.println();
+        }
+    }
+
     public static ChessPosition readChessPosition(Scanner sc){
         try {
             String s = sc.nextLine();
