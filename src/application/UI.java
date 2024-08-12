@@ -38,7 +38,7 @@ public class UI {
             }
             System.out.println();
         }
-        System.out.print("  A  B  C  D  E  F  G  H");
+        System.out.print("     A  B   C   D  E   F   G   H");
     }
 
     public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves){
@@ -49,7 +49,7 @@ public class UI {
             }
             System.out.println();
         }
-        System.out.print("  A  B  C  D  E  F  G  H");
+        System.out.print("     A  B   C   D  E   F   G   H");
     }
 
     private static void printPiece(ChessPiece piece, boolean background){
@@ -57,7 +57,7 @@ public class UI {
             System.out.print(ANSI_BLUE_BACKGROUND);
         }
         if (piece == null){
-            System.out.print("--" + ANSI_RESET);
+            System.out.print("―" + ANSI_RESET);
         }else{
             System.out.print(piece);
         }
