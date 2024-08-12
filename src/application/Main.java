@@ -18,6 +18,8 @@ public class Main {
 
         while (true) {
             try {
+                UI.clearScreen();
+
                 UI.printBoard(chessMatch.getPieces());
                 System.out.println();
                 System.out.print("Source: ");
@@ -26,7 +28,6 @@ public class Main {
                 System.out.println();
                 System.out.print("Target: ");
                 ChessPosition target = UI.readChessPosition(sc);
-                UI.clearScreen();
 
                 ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
             }catch (ChessException e ){

@@ -1,4 +1,4 @@
-package pieces;
+package chess.pieces;
 
 import boardgame.Board;
 import chess.ChessPiece;
@@ -14,8 +14,13 @@ public class Rook extends ChessPiece {
     public String toString(){
         if (this.getColor() == Color.WHITE){
             return "♖";
-        }else{
-            return "♜";
         }
+        return "♜";
+    }
+
+    @Override
+    public boolean[][] possibleMoves() {
+        boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
+        return mat;
     }
 }
