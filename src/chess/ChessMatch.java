@@ -116,7 +116,7 @@ public class ChessMatch {
             throw new IllegalStateException("There is no piece to be promoted");
         }
         if (!type.equals("♝") && !type.equals("♞") && !type.equals("♜") & !type.equals("♛")){
-            throw new IllegalStateException("Invalid type for promotion");
+            return promoted;
         }
 
         Position pos = promoted.getChessPosition().toPosition();

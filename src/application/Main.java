@@ -45,6 +45,10 @@ public class Main {
                 if (chessMatch.getPromoted() != null){
                     System.out.print("Enter piece to promotion (♝/♞/♜/♛): ");
                     String type = sc.nextLine();
+                    while (!type.equals("♝") && !type.equals("♞") && !type.equals("♜") & !type.equals("♛")){
+                        System.out.print("Invalid value! Enter piece to promotion (♝/♞/♜/♛): ");
+                        type = sc.nextLine();
+                    }
                     chessMatch.replacePromotedPiece(type);
                 }
             }catch (ChessException e ){
