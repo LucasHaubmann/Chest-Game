@@ -54,3 +54,4 @@ public class Main {
         UI.printMatch(chessMatch, captured);
     }
 }
+ 
