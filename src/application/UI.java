@@ -84,7 +84,7 @@ public class UI {
         if (piece == null){
             System.out.print("―" + ANSI_RESET);
         }else{
-            System.out.print(piece);
+            System.out.print(piece + ANSI_RESET);
         }
         System.out.print(" ");
     }
