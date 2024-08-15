@@ -71,6 +71,5 @@ public class Knight extends ChessPiece {
         }
         return "♘";
     }
-
 }
 
