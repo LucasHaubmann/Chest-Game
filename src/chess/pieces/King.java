@@ -5,18 +5,10 @@ import boardgame.Position;
 import chess.ChessPiece;
 import chess.Color;
 
-public class    King extends ChessPiece {
+public class King extends ChessPiece {
 
     public King(Board board, Color color){
         super(board, color);
-    }
-
-    @Override
-    public String toString(){
-        if (this.getColor() == Color.WHITE){
-            return "♚";
-        }
-        return "♔";
     }
 
     private boolean canMove(Position position){
@@ -79,5 +71,13 @@ public class    King extends ChessPiece {
             mat[p.getRow()][p.getColumn()] = true;
         }
         return mat;
+    }
+
+    @Override
+    public String toString(){
+        if (this.getColor() == Color.WHITE){
+            return "♚";
+        }
+        return "♔";
     }
 }
