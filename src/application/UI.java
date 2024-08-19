@@ -6,6 +6,7 @@ import chess.ChessPiece;
 import chess.ChessPosition;
 import chess.Color;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -21,8 +22,17 @@ public class UI {
 
 
     public static void clearScreen(){
-        for (int i = 0; i < 15; i++) {
-            System.out.println();
+        try {
+            if (System.getProperty("os.name").toLowerCase().contains("win")) {
+                // Comando para limpar a tela no Windows
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } else {
+                // ANSI escape code para limpar a tela em Unix/Linux/macOS
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+            }
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
